@@ -14,9 +14,13 @@
     "@remix-run/node": "^2.16.7",
     "@remix-run/react": "^2.16.7",
     "@remix-run/serve": "^2.16.7",
+<<<<<<< HEAD
     "@strapi/strapi": "^5.13.0",
     "axios": "^1.9.0",
     "framer-motion": "^12.12.1",
+=======
+    "dotenv": "^16.5.0",
+>>>>>>> 85504747a0d1cfa1d568ec891395ebeaf7b07126
     "isbot": "^4.1.0",
     "my-remix-app": "file:",
     "react": "^18.2.0",
