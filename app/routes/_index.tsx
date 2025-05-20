@@ -1,4 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
+import { Link } from "@remix-run/react";
+
 
 export const meta: MetaFunction = () => {
   return [
@@ -33,6 +35,11 @@ export default function Index() {
             What&apos;s next?
           </p>
           <ul>
+            <li>
+            <Link to="/collection" className="text-blue-600 underline">
+              Voir la collection
+            </Link>
+            </li>
             {resources.map(({ href, text, icon }) => (
               <li key={href}>
                 <a
@@ -46,6 +53,7 @@ export default function Index() {
                 </a>
               </li>
             ))}
+
           </ul>
         </nav>
       </div>
