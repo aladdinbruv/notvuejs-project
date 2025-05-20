@@ -6,10 +6,13 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
+import { PageTransition } from "./components/PageTransition";
 
 import "./tailwind.css";
+import styles from "./styles/auth.css";
 
 export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: styles },
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
     rel: "preconnect",
@@ -41,5 +44,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <div className="remix-app">
+      <PageTransition>
+        <Outlet />
+      </PageTransition>
+    </div>
+  );
 }

@@ -1,4 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
+import { Link } from "@remix-run/react";
 
 export const meta: MetaFunction = () => {
   return [
@@ -48,6 +49,71 @@ export default function Index() {
             ))}
           </ul>
         </nav>
+        
+        <div className="mt-4 bg-purple-100 p-4 rounded-lg">
+          <h2 className="font-bold text-xl mb-2 text-purple-800">Auth Testing</h2>
+          <div className="space-y-2">
+            <Link 
+              to="/token-test" 
+              className="text-purple-700 hover:text-purple-900 hover:underline flex items-center"
+            >
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                className="h-5 w-5 mr-2" 
+                viewBox="0 0 20 20" 
+                fill="currentColor"
+              >
+                <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+              </svg>
+              Test Authentication Token
+            </Link>
+            
+            <Link 
+              to="/register-test" 
+              className="text-purple-700 hover:text-purple-900 hover:underline flex items-center"
+            >
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                className="h-5 w-5 mr-2" 
+                viewBox="0 0 20 20" 
+                fill="currentColor"
+              >
+                <path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z" />
+              </svg>
+              Test User Registration
+            </Link>
+            
+            <Link 
+              to="/strapi-advanced-debug" 
+              className="text-purple-700 hover:text-purple-900 hover:underline flex items-center"
+            >
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                className="h-5 w-5 mr-2" 
+                viewBox="0 0 20 20" 
+                fill="currentColor"
+              >
+                <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+              </svg>
+              Advanced Strapi Debug Tool
+            </Link>
+            
+            <Link 
+              to="/cors-test" 
+              className="text-purple-700 hover:text-purple-900 hover:underline flex items-center"
+            >
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                className="h-5 w-5 mr-2" 
+                viewBox="0 0 20 20" 
+                fill="currentColor"
+              >
+                <path fillRule="evenodd" d="M2.94 6.412A2 2 0 002 8.108V16a2 2 0 002 2h12a2 2 0 002-2V8.108a2 2 0 00-.94-1.696l-6-3.75a2 2 0 00-2.12 0l-6 3.75zm2.615 2.423a1 1 0 10-1.11 1.664l5 3.333a1 1 0 001.11 0l5-3.333a1 1 0 00-1.11-1.664L10 11.798 5.555 8.835z" clipRule="evenodd" />
+              </svg>
+              CORS Configuration Test
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
